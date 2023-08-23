@@ -1,9 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Kumbh+Sans&family=Lato:wght@700&family=Manrope:wght@600&family=Outfit&family=Overpass&family=Space+Mono&display=swap');
+/* font-family: 'Inter', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Kumbh+Sans&family=Lato:wght@700&family=Manrope:wght@600&family=Outfit&family=Overpass&family=Russo+One&family=Space+Mono&display=swap');
+/* font-family: 'Russo One', sans-serif; */
 :root {
  
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  /* Colors */
+  --common-white: #FFF;
+  --common-black: #0D0D0D;
+  --background-color: #EEE;
+  --input-background-color: #EBEFF2;
+  --common-green: #20EEB0;
+  --logo-color: #007FDB;
+  --dark-grey-color: #888888;
+
 }
 
 *,
