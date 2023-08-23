@@ -7,7 +7,7 @@ function App() {
 
   return (
     
-    <div>
+    <div className='app-wrapper'>
       This is an App!
     </div>
   )

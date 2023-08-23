@@ -2,7 +2,9 @@
 /* font-family: 'Inter', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Kumbh+Sans&family=Lato:wght@700&family=Manrope:wght@600&family=Outfit&family=Overpass&family=Russo+One&family=Space+Mono&display=swap');
 /* font-family: 'Russo One', sans-serif; */
-:root {
+:root { 
+
+  background-color: var(--background-color);
  
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -27,4 +29,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body
+{
+  width: 100%;
+  min-height: 100vh;
 }
