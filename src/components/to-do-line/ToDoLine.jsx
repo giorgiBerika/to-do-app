@@ -6,7 +6,7 @@ import checkedSign from '../../assets/checked-icon.png'
 import unCheckedSign from '../../assets/unChecked-icon.png'
 
 import trashCan from '../../assets/trash-can-icon.png'
-const ToDoLine = () =>
+const ToDoLine = (props) =>
 {
     const [signClicked, setSignClicked] = useState(false);
 
@@ -14,12 +14,20 @@ const ToDoLine = () =>
     {
         setSignClicked(!signClicked);
     }
+    const trashClickHandler = (e) =>
+    {   
+        const img = e.target;
+
+        const parentLineWrapper = img.closest('.to-do-line-wrapper');
+
+        parentLineWrapper.style.display = 'none';
+    }
 
     return (
-        <div className='to-do-line-wrapper'>
+        <div className='to-do-line-wrapper' >
             <div className='to-do-line-left'>
-                <h3>dinner</h3>
-                <span>today at 8:00 pm</span>
+                <h3>{props.toDoWork}</h3>
+                <span>today at  {props.workHour}:{props.workMinute}  {(props.workHour < 12) ? 'am' : 'pm'}</span>
             </div>
             <div className='to-do-line-right'>
                 <img 
@@ -27,6 +35,8 @@ const ToDoLine = () =>
                     src={(signClicked) ? checkedSign : unCheckedSign} 
                     alt='check sign'/>
                 <img 
+                   
+                    onClick={(e) => trashClickHandler(e)}
                     src={trashCan}
                     alt='Trash can icon'/>
             </div>

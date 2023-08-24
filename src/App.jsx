@@ -5,7 +5,7 @@ import './App.css'
 import {Header, Inputter, ToDoLine} from './components';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [toDoLines, setToDoLines] = useState([]);
 
   return (
     
@@ -14,10 +14,14 @@ function App() {
         <div className='app-inner-container'>
           <Header />
           <div className='app-toDo-container'>
-            <Inputter />
+            <Inputter 
+              toDoLines={toDoLines}
+              setToDoLines={setToDoLines}
+              />
             <div className='app-toDoLine-container'>
-              <ToDoLine />
-              <ToDoLine />
+              {toDoLines.map((line) => {
+                return (line)
+              })}
             </div>
           </div>
 
