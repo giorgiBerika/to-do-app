@@ -46,8 +46,23 @@
     align-items: flex-start;
     gap:24px;
 
-    min-height: 200px;
-
+    height: 200px;
     margin-top: 36px;
 
+    overflow-y: scroll;
+
+     scrollbar-width: thin;
+
+}
+
+.app-toDoLine-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.app-toDoLine-container::-webkit-scrollbar-thumb {
+    background-color: #20EEB0;
+}
+
+.app-toDoLine-container::-webkit-scrollbar-track {
+    background-color: #FFF;
 }
