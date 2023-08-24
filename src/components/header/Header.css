@@ -52,3 +52,23 @@
     align-items: center;
     gap: 1rem;
 }
+
+@media screen and (max-width: 900px) {
+    .app-header-wrapper
+    {
+        width: 350px;
+    }
+    .app-header-wrapper
+    .app-header-date-wrapper
+    .app-date-day-num
+    {
+        font-size: 1rem;
+    }
+    
+    .app-header-wrapper
+    .app-header-date-wrapper
+    .app-date-time-am-pm
+    {
+        font-size: 2rem;
+    }
+}

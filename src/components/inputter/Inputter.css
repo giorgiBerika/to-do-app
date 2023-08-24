@@ -56,3 +56,11 @@ img
     cursor: pointer;
 
 }
+
+@media screen and (max-width: 900px) {
+    .app-inputter-wrapper
+    .app-input-bar-container
+    {
+        width: 200px;
+    }
+}

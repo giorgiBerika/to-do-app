@@ -66,3 +66,23 @@
 .app-toDoLine-container::-webkit-scrollbar-track {
     background-color: #FFF;
 }
+
+@media screen and (max-width: 900px) {
+
+    .app-wrapper
+    {
+        flex-direction: column;
+    }
+    .app-wrapper
+    .app-title
+    {
+        font-size: 3em;
+    }
+
+    .app-wrapper
+    .app-inner-container
+    .app-toDo-container
+    {
+        max-width: 350px;
+    }
+}   
