@@ -17,6 +17,7 @@ function App() {
             <Inputter />
             <div className='app-toDoLine-container'>
               <ToDoLine />
+              <ToDoLine />
             </div>
           </div>
 

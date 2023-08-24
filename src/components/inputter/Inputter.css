@@ -11,9 +11,8 @@
 {
     border-radius: 5px;
     background-color: var(--input-background-color);
+    
     width: 275px;
-    /* min-height: ; */
-    border: 1px solid red;
 
     position: relative;
 }

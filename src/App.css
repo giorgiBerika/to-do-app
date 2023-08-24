@@ -28,4 +28,25 @@
 .app-toDo-container
 {
     font-family: 'Inter', sans-serif;
+    width: 100%;
+    padding: 23px 29px;
+
+    background-color: var(--common-white);
+
+    border-radius: 0 0 10px 10px;
+}
+
+.app-wrapper
+.app-inner-container
+.app-toDo-container
+.app-toDoLine-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:24px;
+
+    min-height: 200px;
+
+    margin-top: 36px;
 }

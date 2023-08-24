@@ -1,0 +1,41 @@
+.to-do-line-wrapper
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.to-do-line-wrapper
+.to-do-line-left
+h3
+{
+    font-size: 18px;
+    color: var(--common-black);
+
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+.to-do-line-wrapper
+.to-do-line-left
+span
+{
+    font-size: 14px;
+    font-weight: 400;
+
+    color: var(--dark-grey-color);
+
+    text-transform: capitalize;
+}
+.to-do-line-wrapper
+.to-do-line-right
+{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.to-do-line-wrapper
+.to-do-line-right
+img
+{
+    cursor: pointer;
+}
