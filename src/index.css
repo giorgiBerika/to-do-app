@@ -4,6 +4,9 @@
 /* font-family: 'Russo One', sans-serif; */
 :root { 
 
+  font-style: normal;
+  line-height: normal;
+
   background-color: var(--background-color);
  
   text-rendering: optimizeLegibility;
@@ -33,6 +36,10 @@
 
 body
 {
+  max-width: 1920px;
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

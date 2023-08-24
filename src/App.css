@@ -1,1 +1,31 @@
-
+.app-wrapper
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.app-wrapper
+.app-title
+{
+    font-family: 'Inter', sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+    color: var(--logo-color);
+    text-transform: capitalize;
+}
+.app-wrapper
+.app-inner-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+.app-wrapper
+.app-inner-container
+.app-toDo-container
+{
+    font-family: 'Inter', sans-serif;
+}
