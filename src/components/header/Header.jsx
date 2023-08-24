@@ -1,49 +1,41 @@
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 
+const Header = () => {
+  const [currentTime, setCurrentTime] = useState(new Date());
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
 
-const Header = () =>
-{
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
 
-    return (
-        <div className='app-header-wrapper'>
-            <div className='app-header-date-wrapper'>
-                <div className='app-date-day-num'>
-                    <span className='app-date-day'>thur</span>
-                    <span className='app-date-num'>9</span>
-                </div>
-                <div className='app-date-time-am-pm'>
-                    <span className='app-date-time'></span>
-                    <span className='app-date-am-pm'>am</span>
-                </div>
-            </div>
+  const weekDaysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const currentDay = weekDaysArray[currentTime.getDay()];
+  const dayNum = currentTime.getDate();
+  const currentHour = currentTime.getHours();
+  const currentMinute = currentTime.getMinutes();
+  const amPm = currentHour < 12 ? "AM" : "PM";
+  const formattedMinute = String(currentMinute).padStart(2, '0');
+
+  return (
+    <div className='app-header-wrapper'>
+      <div className='app-header-date-wrapper'>
+        <div className='app-date-day-num'>
+          <span className='app-date-day'>{currentDay.substring(0, 4)}</span>
+          <span className='app-date-num'>{dayNum}</span>
         </div>
-    )
+        <div className='app-date-time-am-pm'>
+          <span className='app-date-time'>{currentHour}:{formattedMinute}</span>
+          <span className='app-date-am-pm'>{amPm}</span>
+        </div>
+      </div>
+    </div>
+  );
 };
-
- const setClock = () =>
-    {   
-        const hourHtml = document.querySelector('.app-date-time');
-        const weekDay= document.querySelector('.app-date-day');
-        const dayNum = document.querySelector('.app-date-num');
-        const amPm = document.querySelector('.app-date-am-pm');
-        let weekDaysArray = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
-
-        const currentTime = new Date();
-        let currentMinute = currentTime.getMinutes();
-        let currentHour = currentTime.getHours();
-        let currentDay = currentTime.getDay();
-
-        let fullTimer = `${currentHour} : ${currentMinute}`;
-
-        hourHtml.innerHTML = fullTimer;
-        dayNum.innerHTML = currentDay;
-        weekDay.innerHTML = weekDaysArray[currentDay].substring(0, 4);
-        amPm.innerHTML = (currentHour < 12) ? "AM" : "PM";
-    }
-    setInterval(() =>
-    {
-        setClock();
-    }, );
 
 export default Header;
